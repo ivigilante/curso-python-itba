@@ -37,7 +37,7 @@ Primero debemos instalar Git si estamos usando Windows.
 Luego:    
 `git clone https://github.com/ivigilante/curso-python-itba`   
 `cd curso-python-itba`   
-`git checkout primerletradelnombreapellido` (esto es para crear una rama. Si me llamo Raul Pascal, seria rpascal)    
+`git checkout -b primerletradelnombreapellido` (esto es para crear una rama. Si me llamo Raul Pascal, seria rpascal)    
 Empezamos a trabajar y una vez que hicimos algo, subimos los cambios:   
 `git status` (nos dira que archivos tenemos modificados)   
 `git add LosArchivos`   
