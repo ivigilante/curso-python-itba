@@ -78,10 +78,9 @@ def traducir(string):
 
 	string = "".join(list_caracteres)
 	print(string)
-	
+
 def traducirV2(string):
 	for letra in string:
 		if letra in dic_traduccion:
 			string = string.replace(letra,dic_traduccion[letra])
 	print(string)
-traducirV2("𐌕𐌇𐌄 𐌃𐌄𐌀𐌃 𐌀𐌓𐌄 𐌀𐌋𐌉𐌖𐌄")
