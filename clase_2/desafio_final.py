@@ -66,6 +66,10 @@ dic_traduccion = {
 	'𐌖' : 'V',
 	'𐌗' : 'X'
 }
+# Usando translate
+def traducirTranslate(string):
+	translation_table = string.maketrans(dic_traduccion)
+	print(string.translate(trans))
 
 #Crear una función que recibe un string, transforma todos los caracteres del 
 # alfabeto latino arcaico en caracteres modernos, no modifica el resto de 
@@ -84,3 +88,5 @@ def traducirV2(string):
 		if letra in dic_traduccion:
 			string = string.replace(letra,dic_traduccion[letra])
 	print(string)
+traducir("𐌊𐌉𐌋𐌋 𐌕𐌇𐌄𐌌")
+traducirTranslate("𐌊𐌉𐌋𐌋 𐌕𐌇𐌄𐌌")
