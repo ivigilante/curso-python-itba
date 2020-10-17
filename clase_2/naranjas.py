@@ -14,18 +14,17 @@
 # >> P = ['B', 'B', 'B', 'B', 'B', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N']
 
 def contarFruta(frutas):
-	lista_frutas = list(frutas)
-	n_bananas = lista_frutas.count("B")
-	n_naranjas = lista_frutas.count("N")
-
+	n_bananas = frutas.count("B")
+	n_naranjas = frutas.count("N")
 	if n_naranjas >= 2:
 		n_naranjas -= 1
-	n_bananas -= 2
+	n_bananas -= min(n_bananas,2)
 	return {"bananas":n_bananas, "naranjas":n_naranjas}
+t = input()
 
 # fruta = ["N" for i in range(10)]
 # fruta.extend(["B" for i in range(10)])
 # print(fruta)
-# resultado = contarFruta(str(fruta))
-# for fruta, cant in resultado.items():
-# 	print("{}: {}.".format(fruta,cant))
+resultado = contarFruta(t)
+for fruta, cant in resultado.items():
+	print("{}: {}.".format(fruta,cant))

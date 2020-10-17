@@ -27,12 +27,10 @@
 # caracter = '5'
 # numero = ord(caracter) - ord('0')
 def text2number2(texto):
-	texto.strip()
-	print(texto)
 	texto_num = texto.strip()
 	num = 0
 	positivo = True
-	if texto_num[0] == "-" or texto_num[0] == "+":
+	if texto_num[0] in ("-","+"):
 		positivo = texto_num[0] == "+"
 		texto_num = texto_num[1:]
 	for char in texto_num:
@@ -67,17 +65,17 @@ def text2number(texto):
 
 tex = "       123341             "
 print(text2number2(tex))
-print(tex)
+# print(tex)
 
 # print(text2number("-98"))
 # print(text2number("  +123   "))
 # print(text2number("  -47 "))
 # print(text2number("12s3"))
 
-# print(text2number2("123"))
-# print(text2number2("-98"))
-# print(text2number2("+98"))
+print(text2number2("12 3"))
+print(text2number2("-98"))
+print(text2number2("+98"))
 
-# print(text2number2("  +123   "))
-# print(text2number2("  -47 "))
-# print(text2number2("12s3")) 
+print(text2number2("  +123   "))
+print(text2number2("  -47 "))
+print(text2number2("12s3")) 
