@@ -22,3 +22,9 @@ def palindromo(palabra):
 		if palabra[i] != palabra[-(i+1)]:
 			return False
 	return True
+
+def palin(palabra):
+	tex = "".join([letra for letra in palabra.lower() if letra.isalpha()])
+	return tex == tex[::-1]
+
+print(palin("¿Acaso hubo buhos aca?"))
