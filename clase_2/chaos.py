@@ -26,19 +26,33 @@
 # Suponer que las letras son todas minusculas.
 
 diccionario = {"hola":"你好","como":"how","estás":"estáis","ve":"regards","bien":"bom","se":"it"}
-oracion = "hola, como estás?"
+oracion = "hola, como estás, hola?"
 oracion2 = "se ve bien!"
+
+def trad(texto):
+	for key in diccionario:
+		idx = texto.find(key)
+		if idx != -1:
+			texto = texto.replace(texto[idx:idx+len(key)],diccionario.get(key))
+	return texto
 
 def traducir(texto):
 	word = ""
 	traduccion = ""
 	for char in texto:
-		if char.isalpha():
-			word += char
-		else:
-			traduccion += diccionario.get(word,"") + char
-			word = ""
+		word += char
+		if word in diccionario:
+			traduccion += diccionario.get(word,"")
+		# if char.isalpha():
+		# 	word += char
+		# else:
+		# 	traduccion += diccionario.get(word,"") + char
+		# 	word = ""
 	return traduccion
 
-print(traducir(oracion))
-print(traducir(oracion2))
+print(trad(oracion))
+# print(oracion)
+print(trad(oracion2))
+
+# print(traducir(oracion))
+# print(traducir(oracion2))
