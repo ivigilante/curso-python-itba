@@ -40,19 +40,14 @@ def traducir(texto):
 	word = ""
 	traduccion = ""
 	for char in texto:
-		word += char
-		if word in diccionario:
-			traduccion += diccionario.get(word,"")
-		# if char.isalpha():
-		# 	word += char
-		# else:
-		# 	traduccion += diccionario.get(word,"") + char
-		# 	word = ""
+		if char.isalpha():
+			word += char
+		else:
+			traduccion += diccionario.get(word,word) + char
+			word = ""
+	if word:
+		traduccion += diccionario.get(word,word)
 	return traduccion
 
 print(trad(oracion))
-# print(oracion)
-print(trad(oracion2))
-
-# print(traducir(oracion))
-# print(traducir(oracion2))
+print(traducir(oracion2))
